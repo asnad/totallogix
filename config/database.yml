@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: totallogix_production
-  username: totallogix
-  password: <%= ENV['TOTALLOGIX_DATABASE_PASSWORD'] %>
+  database: totallogix_development
