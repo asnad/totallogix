@@ -10,8 +10,9 @@ module Totallogix
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
-    config.assets.precompile += %w( pages.css pages.js )
-    # Settings in config/environments/* take precedence over those specified here.
+    config.assets.precompile += %w( pages.css )
+    # config.assets.precompile += %w(pages.css font-awesome.min.css agency.min.css bootstrap.min.css )
+# Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
   end
