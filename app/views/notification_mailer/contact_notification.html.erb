@@ -1,0 +1,10 @@
+Hello Admin,
+<p>You just received a message from <%= @contact.name %> here is detail. </p>
+<p>Name: <%= @contact.name %></p>
+<p>Contact No: <%= @contact.phone %></p>
+<p>Email: <%= @contact.email %></p>
+<p>Message: "<%= @contact.message %>"</p>
+
+<p>Please contact the person and reply them ASAP!</p>
+Regards
+<%= ENV["DOMAIN"] %>
