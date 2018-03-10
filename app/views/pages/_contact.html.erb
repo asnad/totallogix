@@ -13,28 +13,33 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <%= f.input :name, input_html:{class: "form-control", id: "name", placeholder: "Your Name *",required: true,:wrapper_html => false, "data-validation-required-message"=>"Please enter your name."}, label: false %>
+                <%= f.input :name, input_html:{class: "form-control",  placeholder: "Your Name *",required: true,:wrapper_html => false, "data-validation-required-message"=>"Please enter your name."}, label: false %>
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                <%= f.input :email, input_html:{class: "form-control",  placeholder: "Your Email *",required: true,:wrapper_html => false, "data-validation-required-message"=>"Please enter your email address."}, label: false %>
+                <!-- <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message=""> -->
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+                <%= f.input :phone, input_html:{class: "form-control",  placeholder: "Your Phone *",required: true,:wrapper_html => false, "data-validation-required-message"=>"Please enter your phone number."}, label: false %>
+                <!-- <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message=""> -->
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+                <%= f.input :message, input_html:{class: "form-control", placeholder: "Your Message *",required: true,:wrapper_html => false, "data-validation-required-message"=>"Please enter a message."}, label: false %>
+
+                <!-- <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message=""></textarea> -->
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="clearfix"></div>
             <div class="col-lg-12 text-center">
               <div id="success"></div>
-              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+              <%= f.submit "Send Message", class: " btn-xl text-uppercase btn btn-primary",id: "" %>
+              <!-- <button  class="btn btn-primary" type="submit">Send Message</button> -->
             </div>
           </div>
         <!-- </form> -->
