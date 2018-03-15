@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 20180315113719) do
     t.string "twitter_profile"
     t.integer "status", default: 0
     t.integer "sort_order"
-    t.string "image_asset", default: "default-user.png"
+    t.string "image_asset", default: "team/default-user.png"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

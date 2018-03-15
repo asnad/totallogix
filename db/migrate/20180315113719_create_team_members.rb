@@ -9,7 +9,7 @@ class CreateTeamMembers < ActiveRecord::Migration[5.1]
       t.string :twitter_profile
       t.integer :status, default: 0
       t.integer :sort_order
-      t.string :image_asset, default: "default-user.png"
+      t.string :image_asset, default: "team/default-user.png"
       t.timestamps
     end
     TeamMember.create(image_asset: "team/asnad.jpg", name: "Asnad Atta", position: "CEO/Co-founder", sort_order: 0)
