@@ -1,0 +1,2 @@
+class LandingContent < ApplicationRecord
+end
