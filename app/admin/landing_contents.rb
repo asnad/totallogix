@@ -9,7 +9,9 @@ ActiveAdmin.register LandingContent do
       :service_upper_text,
       :about_us_upper_text,
       :team_description,
-      :contact_us_heading
+      :contact_us_heading,
+      :service_heading,
+      :about_us_heading
     ]
   end
 

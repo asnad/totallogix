@@ -62,8 +62,10 @@ ActiveRecord::Schema.define(version: 20180315074854) do
     t.string "team_heading"
     t.text "team_description"
     t.string "service_upper_text"
+    t.string "service_heading"
     t.string "contact_upper_text"
     t.string "about_us_upper_text"
+    t.string "about_us_heading"
     t.string "contact_us_heading"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
