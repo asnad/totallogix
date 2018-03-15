@@ -58,8 +58,13 @@ ActiveRecord::Schema.define(version: 20180315074854) do
   create_table "landing_contents", force: :cascade do |t|
     t.string "slogan"
     t.string "main_heading"
+    t.string "team_upper_text"
+    t.string "team_heading"
+    t.text "team_description"
     t.string "service_upper_text"
+    t.string "contact_upper_text"
     t.string "about_us_upper_text"
+    t.string "contact_us_heading"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
