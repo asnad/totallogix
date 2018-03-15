@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180315101851) do
+ActiveRecord::Schema.define(version: 20180315113719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,20 @@ ActiveRecord::Schema.define(version: 20180315101851) do
     t.text "description"
     t.integer "sort_order"
     t.string "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "team_members", force: :cascade do |t|
+    t.string "name"
+    t.string "position"
+    t.string "description"
+    t.string "facebook_profile"
+    t.string "linkedin_profile"
+    t.string "twitter_profile"
+    t.integer "status", default: 0
+    t.integer "sort_order"
+    t.string "image_asset", default: "default-user.png"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

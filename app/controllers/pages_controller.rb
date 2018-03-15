@@ -6,6 +6,7 @@ class PagesController < ApplicationController
     if params[:id] == "home"
       @contents = LandingContent.last
       @services = Service.order(sort_order: :asc)
+      @members = TeamMember.where(status: TeamMember.statuses[:active]).order(sort_order: :asc)
     end
   end
 end

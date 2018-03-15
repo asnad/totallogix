@@ -7,78 +7,32 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4">
-        <div class="team-member">
-          <%= image_tag "team/asnad.jpg", class: "mx-auto rounded-circle"%>
-          <h4>Asnad Atta</h4>
-          <p class="text-muted">CEO/Co-founder</p>
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-facebook"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-linkedin"></i>
-              </a>
-            </li>
-          </ul>
+      <% @members.each do |member| %>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <%= image_tag member.image_asset, class: "mx-auto rounded-circle"%>
+            <h4><%= member.name %></h4>
+            <p class="text-muted"><%= member.position %></p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <%= link_to member.facebook_profile.blank? ? "#" : member.facebook_profile do %>
+                  <i class="fa fa-facebook"></i>
+                <% end %>
+              </li>
+              <li class="list-inline-item">
+                <%= link_to member.twitter_profile.blank? ? "#" : member.twitter_profile do %>
+                  <i class="fa fa-twitter"></i>
+                <% end %>
+              </li>
+              <li class="list-inline-item">
+                <%= link_to member.linkedin_profile.blank? ? "#" : member.linkedin_profile do %>
+                  <i class="fa fa-linkedin"></i>
+                <% end %>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <%= image_tag "team/ayaz.jpg", class: "mx-auto rounded-circle" %>
-          <h4>Ayaz Hussain</h4>
-          <p class="text-muted">Co-founder/Business Analyst</p>
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-facebook"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-linkedin"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <%= image_tag "team/3.jpg",  class: "mx-auto rounded-circle"%>
-          <h4>Tariq Hussain</h4>
-          <p class="text-muted">Lead Developer</p>
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-facebook"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-linkedin"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <% end %>
     </div>
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
