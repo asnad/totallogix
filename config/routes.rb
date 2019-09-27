@@ -5,4 +5,13 @@ Rails.application.routes.draw do
   resources :contacts, only: [:create]
   get "/pages/*id" => 'pages#show', as: :page, format: false
   root to: 'pages#show', id: 'home'
+  namespace :api do
+    namespace :v1 do
+      resources :test, only:[] do
+        collection do
+          get :simple_test
+        end
+      end
+    end
+  end
 end
