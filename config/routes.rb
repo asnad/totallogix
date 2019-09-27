@@ -7,11 +7,7 @@ Rails.application.routes.draw do
   root to: 'pages#show', id: 'home'
   namespace :api do
     namespace :v1 do
-      resources :test, only:[] do
-        collection do
-          get :simple_test
-        end
-      end
+      resources :items, only:[:index, :create]
     end
   end
 end
